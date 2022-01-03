@@ -1,9 +1,11 @@
 import React from 'react'
-
+import Profile from './components/ProfileFunction'
+import ProfileClassComponent from './components/ProfileClassComponent'
 const App = () => {
     return (
         <div>
-            <h1>Tutorial 1</h1>
+           <Profile name='Вася' registredAt={new Date(2022,0,3)} />
+           <ProfileClassComponent name='Сергей' registredAt={new Date(2022,0,3)} />
         </div>
     )
 }
