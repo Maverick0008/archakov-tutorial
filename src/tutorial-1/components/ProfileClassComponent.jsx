@@ -2,7 +2,7 @@ import React from 'react'
 
 class ProfileClassComponent extends React.Component {
     constructor(props){
-        const name = props.name
+        const name = props.name.split(' ')[0]
         const date = props.registredAt.toLocaleString("ru", {
             year: "numeric",
             month: "long",

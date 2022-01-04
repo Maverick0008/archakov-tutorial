@@ -4,8 +4,8 @@ import ProfileClassComponent from './components/ProfileClassComponent'
 const App = () => {
     return (
         <div>
-           <Profile name='Вася' registredAt={new Date(2022,0,3)} />
-           <ProfileClassComponent name='Сергей' registredAt={new Date(2022,0,3)} />
+           <Profile name='Вася Пупкин' registredAt={new Date(2022,0,3)} />
+           <ProfileClassComponent name='Сергей Иванов' registredAt={new Date(2022,0,3)} />
         </div>
     )
 }
