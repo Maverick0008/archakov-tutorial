@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1, 
+        "title": "Сколько всего мест в доме?", 
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing Maxime fuga deserunt aliquid voluptatum ad, molestiae dicta officiis animi eum mollitia, reiciendis a cum ratione veritatis cupiditate voluptatem. Consectetur, exercitationem magnam "
+        
+    },
+    {
+        "id": 2, 
+        "title": "Самая дорогая квартира?", 
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing Maxime fuga deserunt aliquid voluptatum ad, molestiae dicta officiis animi eum mollitia, reiciendis a cum ratione veritatis cupiditate voluptatem. Consectetur, exercitationem magnam "
+    },
+    {
+        "id": 3, 
+        "title": "Могу ли я отменить бронирование?", 
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing Maxime fuga deserunt aliquid voluptatum ad, molestiae dicta officiis animi eum mollitia, reiciendis a cum ratione veritatis cupiditate voluptatem. Consectetur, exercitationem magnam "
+    },
+    {
+        "id": 4, 
+        "title": "Можно ли купить квартиру?", 
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing Maxime fuga deserunt aliquid voluptatum ad, molestiae dicta officiis animi eum mollitia, reiciendis a cum ratione veritatis cupiditate voluptatem. Consectetur, exercitationem magnam "
+    }
+]
