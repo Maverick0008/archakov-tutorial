@@ -55,9 +55,7 @@ export default function App() {
       )}
       {
         /* ТУТ ДОПИСАТЬ РОУТ НА ПОЛНУЮ ЗАПИСЬ */
-        pathname.includes("/post/") && (
-          <Article id={postPath} />
-        )
+        pathname.includes("/post/") && <Article id={postPath} />
       }
       {pathname === "/about" && (
         <Card>
