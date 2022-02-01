@@ -1,7 +1,11 @@
 import { Nav, Navbar, Row, Col, Card } from "react-bootstrap";
+
 import React from "react";
+
 import "./style.css";
+
 import Article from "./components/Article";
+
 export default function App() {
   const { pathname } = window.location;
   const arrayPath = pathname.split("/");
