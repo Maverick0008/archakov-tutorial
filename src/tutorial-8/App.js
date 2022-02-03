@@ -3,16 +3,29 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 import { TextField, Button } from "@mui/material";
+import {yupResolver} from '@hookform/resolvers/yup'
 
+import * as yup from "yup";
+const scheme = yup.object().shape({
+    firstName: yup.string().min(2, 'Имя должно быть больше 2-х символов').required("Обязательно!"),
+    lastName: yup.string().min(3, 'Фамилия должна быть больше 3-х символов').required("Обязательно!"),
+    email: yup.string().email('Неверная почта!').required('Укажите почту'),
+    password: yup.string().when('email', {
+        is: (value) => value.includes('@'),
+        then: yup.string().min(6).max(32)
+    })
+})
 const App = () => {
-  const { register, handleSubmit, formState, reset } = useForm();
+  const { register, handleSubmit, formState, reset } = useForm({
+      resolver: yupResolver(scheme)
+  });
   const onSubmit = (values) => console.log(values);
 
   return (
     <>
       <div className="row">
         <TextField
-          {...register("firstName", { required: "Это обязательное поле" })}
+          {...register("firstName")}
           helperText={
             formState.errors.firstName && formState.errors.firstName.message
           }
@@ -23,7 +36,7 @@ const App = () => {
           fullWidth
         />
         <TextField
-          {...register("lastName", { required: "Это обязательное поле" })}
+          {...register("lastName")}
           helperText={
             formState.errors.lastName && formState.errors.lastName.message
           }
@@ -37,10 +50,7 @@ const App = () => {
 
       <div className="row">
         <TextField
-          {...register("email", { required: "Это обязательное поле", pattern: {
-            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-            message: "Некорректный email"
-          } })}
+          {...register("email")}
           helperText={
             formState.errors.email && formState.errors.email.message
           }
@@ -51,7 +61,7 @@ const App = () => {
           fullWidth
         />
         <TextField
-        {...register("password", { required: "Это обязательное поле" })}
+        {...register("password")}
         helperText={
           formState.errors.password && formState.errors.password.message
         }
@@ -65,12 +75,12 @@ const App = () => {
       </div>
       <br />
       <div className="row">
-        <Button onClick={handleSubmit(onSubmit)} variant="contained">
+        <Button style={{backgroundColor: "#018F8C"}} onClick={handleSubmit(onSubmit)} variant="contained">
           Зарегистрироваться
         </Button>
       </div>
       <div className="row">
-        <Button onClick={() => reset({firstName: '', lastName: '', email: '', password: ''})} variant="contained" color="secondary">
+        <Button style={{backgroundColor: "#F7C050"}} onClick={() => reset({firstName: '', lastName: '', email: '', password: ''})} variant="contained" color="secondary">
           Очистить
         </Button>
       </div>
