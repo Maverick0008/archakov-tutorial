@@ -14,7 +14,6 @@ import Footer from "./components/Footer";
 
 import { Routes, Route } from "react-router-dom";
 
-
 export default function App() {
   return (
     <div className="App">
@@ -24,7 +23,6 @@ export default function App() {
           <Route path="/" exact element={<Home />} />
           <Route path="/post/:id" exact element={<Article />} />
 
-         
           <Route path="/about" element={<About />} />
           <Route
             path="*"
