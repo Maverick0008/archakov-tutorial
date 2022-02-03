@@ -1,7 +1,11 @@
 import React from "react";
-
-const Article = ({ id }) => {
+import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+const Article = () => {
+    let {id} = useParams();
+      
   return (
+      
     <div>
       <h1>Статья №{id}</h1>
       <p>
@@ -10,9 +14,9 @@ const Article = ({ id }) => {
         dignissimos non minima quia amet possimus? Impedit nemo ducimus fuga
         rem!
       </p>
-      <a href="/">
+      <Link to="/">
         <button>Назад</button>
-      </a>
+      </Link>
     </div>
   );
 };
