@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
   padding: 40px;
 }
 
@@ -15,4 +16,7 @@ code {
 
 .row {
  margin: 20px;
+}
+.buttons {
+  justify-content: space-between;
 }
