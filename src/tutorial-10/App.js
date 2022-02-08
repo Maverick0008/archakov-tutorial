@@ -55,15 +55,13 @@ const App = () => {
           />
           <button
             onClick={handleSubmit}
-            className={`app-form_btn ${
-              state.buttonDisable ? "disabledButton" : ""
-            }`}
+            className="app-form_btn" 
+            disabled={state.loading} 
           >
-            Найти
+            {state.loading ? 'Загрузка...' : 'Найти'}
           </button>
         </div>
 
-        {state.loading && <h3>Загрузка...</h3>}
         {state.userNotFound && <h3>Пользователь не найден</h3>}
         {state.user && (
           <div className="app-user">
