@@ -55,7 +55,6 @@ body {
 .app-input::placeholder {
   color: var(--main-color);
 }
-
 .app-form_btn {
   position: absolute;
   right: 8px;
