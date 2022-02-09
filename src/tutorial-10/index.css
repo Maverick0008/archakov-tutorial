@@ -72,6 +72,11 @@ body {
   color: #fff;
   cursor: pointer;
 }
+.disabledButton {
+	background-color: #484b4e;
+	border: none;
+	box-shadow: none;
+}
 
 .app-user {
   padding: 35px;
@@ -174,9 +179,4 @@ body {
   max-width: 90px;
 	max-height: 90px;
 	border-radius: 50%;
-}
-.disabledButton {
-	background-color: #484b4e;
-	border: none;
-	box-shadow: none;
 }

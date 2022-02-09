@@ -59,6 +59,7 @@ const App = () => {
             disabled={state.loading} 
           >
             {state.loading ? 'Загрузка...' : 'Найти'}
+            
           </button>
         </div>
 
